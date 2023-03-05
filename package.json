@@ -1,0 +1,19 @@
+{
+  "name": "react-slider-builder",
+  "version": "1.0.0",
+  "description": "Open slider builder, create and setting a slider settings written by React",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puleeno/react-slider-builder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/puleeno/react-slider-builder/issues"
+  },
+  "homepage": "https://github.com/puleeno/react-slider-builder#readme"
+}
