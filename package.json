@@ -1,5 +1,5 @@
 {
-  "name": "react-slider-builder",
+  "name": "tetrao",
   "version": "1.0.0",
   "description": "Open slider builder, create and setting a slider settings written by React",
   "main": "src/index.js",
