@@ -11,11 +11,12 @@ const stylesHandler = MiniCssExtractPlugin.loader;
 
 const config = {
   entry: {
-    builder: "./builder/index.tsx",
-    slider: "./slider/index.ts"
+    "builder": "./builder/index.tsx",
+    "slider": "./slider/index.ts",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
+    filename: '[name]/js/[name].js'
   },
   devServer: {
     open: true,
@@ -26,7 +27,9 @@ const config = {
       template: "index.html",
     }),
 
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name]/css/[name].css'
+    }),
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
