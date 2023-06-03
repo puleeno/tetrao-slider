@@ -14,7 +14,7 @@ const config = {
   entry: {
     builder: './builder/index.tsx',
     slider: './slider/index.ts',
-    demo: './demo/demo.ts'
+    demo: './demo/demo.js'
   },
   output: {
     path: path.resolve(__dirname, "dist"),

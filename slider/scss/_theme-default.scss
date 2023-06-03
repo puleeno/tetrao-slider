@@ -1,0 +1,10 @@
+.tetrao-container {
+    &:not([data-theme]), &.theme-default {
+        .tetrao-slide {
+            max-width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
