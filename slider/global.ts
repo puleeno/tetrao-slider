@@ -3,9 +3,10 @@ declare global {
 }
 
 interface TetraoSliderAbstract {
+    originHtml?: string,
+
     mount: Function,
     destroy: Function,
-    getOriginHtml: Function,
     getOriginSelector: Function,
 }
 

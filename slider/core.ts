@@ -36,16 +36,12 @@ class TetraoSlider implements TetraoSliderAbstract {
         const sliderEle = document.querySelector(tetao.getOriginSelector());
 
         if (sliderEle !== undefined) {
-            sliderEle.innerHTML = tetao.getOriginHtml();
+            sliderEle.innerHTML = tetao.originHtml;
         }
     }
 
     getOriginSelector(): string|undefined {
         return this.originSelector;
-    }
-
-    getOriginHtml(): string|undefined {
-        return this.originHtml;
     }
 }
 
