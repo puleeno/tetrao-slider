@@ -4,6 +4,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
+var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -11,12 +12,14 @@ const stylesHandler = MiniCssExtractPlugin.loader;
 
 const config = {
   entry: {
-    "builder": "./builder/index.tsx",
-    "slider": "./slider/index.ts",
+    builder: './builder/index.tsx',
+    slider: './slider/index.ts',
+    demo: './demo/demo.ts'
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: '[name]/js/[name].js'
+    filename: '[name]/js/[name].js',
+    publicPath: '/',
   },
   devServer: {
     open: true,
@@ -33,6 +36,8 @@ const config = {
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+
+    new LiveReloadPlugin({}),
   ],
   module: {
     rules: [
@@ -70,6 +75,8 @@ module.exports = () => {
     config.plugins.push(new WorkboxWebpackPlugin.GenerateSW());
   } else {
     config.mode = "development";
+    config.watch = true;
   }
+
   return config;
 };

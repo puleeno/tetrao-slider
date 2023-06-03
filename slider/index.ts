@@ -1,4 +1,8 @@
 import './scss/slider.scss';
+import './global';
 
-export default {
-}
+import TetraoSlider from './core';
+
+export default TetraoSlider;
+
+window.TetraoSlider = TetraoSlider;
