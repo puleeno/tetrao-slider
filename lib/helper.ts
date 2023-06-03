@@ -1,3 +1,5 @@
+import TetraoSliderOptions from '../slider/options';
+
 const generateSelectorByHtmlElement = (el: Element | HTMLElement): string => {
     if (el.tagName.toLowerCase() == "html")
         return "html";
@@ -14,6 +16,21 @@ const generateSelectorByHtmlElement = (el: Element | HTMLElement): string => {
         return str;
 };
 
+const parseSliderOptions = (rawOptions: any): TetraoSliderOptions => {
+    const options = new TetraoSliderOptions();
+
+    if (typeof rawOptions !== 'object') {
+         return options;
+    }
+
+    if (typeof rawOptions.disable_context !== 'undefined') {
+        options.disableContextMenu = Boolean(rawOptions.disable_context);
+    }
+
+    return options;
+}
+
 export {
+    parseSliderOptions,
     generateSelectorByHtmlElement,
 }
